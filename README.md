@@ -1,4 +1,4 @@
-# Go Hello World Sample
+# My First Go Web application on Bluemix
 
 This application demonstrates a simple, reusable Go web application.
 
