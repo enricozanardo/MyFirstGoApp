@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"html/template"
+	"github.com/onezerobinary/MyGoApp/handler"
 	//for extracting service credentials from VCAP_SERVICES
 	//"github.com/cloudfoundry-community/go-cfenv"
 )
@@ -13,16 +13,6 @@ const (
 	DEFAULT_PORT = "8080"
 )
 
-var index = template.Must(template.ParseFiles(
-  "templates/_base.html",
-  "templates/index.html",
-))
-
-var testo = "OneZero Binary"
-
-func helloworld(w http.ResponseWriter, req *http.Request) {
-  index.Execute(w, testo)
-}
 
 func main() {
 	var port string
@@ -30,9 +20,11 @@ func main() {
 		port = DEFAULT_PORT
 	}
 
-	http.HandleFunc("/", helloworld)
+	// Think about that declaration
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
-	
+
+	http.HandleFunc("/", handler.HomeHandler)
+
 	log.Printf("Starting app on port %+v\n", port)
 	http.ListenAndServe(":"+port, nil)
 }
