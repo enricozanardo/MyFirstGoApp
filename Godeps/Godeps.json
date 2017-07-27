@@ -1,0 +1,5 @@
+{
+	"ImportPath": "mygoapp",
+	"GoVersion": "go1.7.5",
+	"Deps": []
+}
