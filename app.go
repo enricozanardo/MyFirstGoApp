@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"github.com/onezerobinary/MyGoApp/handler"
+	"github.com/onezerobinary/MyFirstGoApp/handler"
 	//for extracting service credentials from VCAP_SERVICES
 	//"github.com/cloudfoundry-community/go-cfenv"
 )

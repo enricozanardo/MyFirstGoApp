@@ -2,7 +2,7 @@ package handler
 
 import (
 	"net/http"
-	"github.com/onezerobinary/MyGoApp/model"
+	"github.com/onezerobinary/MyFirstGoApp/model"
 	"html/template"
 )
 
