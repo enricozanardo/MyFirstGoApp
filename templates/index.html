@@ -2,6 +2,40 @@
 {{ define "content"}}
 <div class="jumbotron text-center">
 	<img class = 'newappIcon' src='/static/images/logo.png'>
-	<h1>Hello from OneZero Binary LTD</h1>
+	<h1>OneZero Binary LTD</h1>
 </div>
+
+
+<div class="container">
+
+	<div class="row">
+		<div class="video-container">
+			<video autoplay loop class="fillWidth">
+				<source src="/static/video/MP4/White-Keyboard.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+				<source src="/static/video/WEBM/White-Keyboard.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+			</video>
+			<div class="overlay">
+				<img class = 'newappIcon' src='/static/images/logo.png'>
+				<h1>OneZero Binary LTD</h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-3">
+			<h4>Info</h4>
+			<p>{{ .Name }} {{ .Surname }}</p>
+			<p>{{ .Email }}</p>
+		</div>
+		<div class="col-sm-6 text-center">
+			<h3 class="blue">Hyperledger Fabric Client</h3>
+			<p>Completely written using Golang!</p>
+		</div>
+		<div class="col-sm-3 text-right">
+			<h4>Source Code</h4>
+			<p><a href="https://github.com/onezerobinary/MyFirstGoApp" target="_blank">GitHub</a></p>
+		</div>
+	</div>
+</div>
+
 {{ end }}
